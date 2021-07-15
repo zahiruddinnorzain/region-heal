@@ -1,0 +1,27 @@
+@media screen and (prefers-color-scheme: light) {
+body {  
+  background-color: white;
+  color: black;  
+}
+  
+  .dark-mode {
+  background-color: #343a40;
+  color: white;
+}
+
+}
+
+.smooth-transition {
+	transition: background-color 300ms;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+.dark-mode {
+  background-color: #343a40;
+  color: white;
+}
+body {  
+  background-color: black;
+  color: white;  
+}
+}
