@@ -2,9 +2,7 @@
 
 @section('content')
 
-@foreach($datas as $data)
-{!! $data->metadata !!}
-@endforeach
+
 
 <!-- <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
     <p>Throw Memory</p>
@@ -12,7 +10,6 @@
         <div class="form-group">
             <textarea class="form-control" rows="5" id="comment_memory"></textarea>
         </div>
-        <i class="fas fa-heart likes"></i>
         <a href="#" class="btn btn-success px-3" role="button" style="float:right;" data-toggle="modal" data-target="#myModal" onclick="clear_memory()">Throw !</a>
     </content>
 </div>
@@ -63,6 +60,22 @@
     </content>
     <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
 </div> -->
+
+
+
+<div class="card w-100 rounded p-2 mt-3 kotak text-dark">
+    <p>Throw Memory</p>
+    <content>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment_memory"></textarea>
+        </div>
+        <a href="#" class="btn btn-success px-3" role="button" style="float:right;" data-toggle="modal" data-target="#myModal" onclick="clear_memory()">Throw !</a>
+    </content>
+</div>
+
+@foreach($datas as $data)
+{!! $data->metadata !!}
+@endforeach
 
 <center>
     <a class="btn btn-success mt-3 px-3" role="button" onclick="reload()">More</a>

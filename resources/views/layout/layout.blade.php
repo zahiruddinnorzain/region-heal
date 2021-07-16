@@ -38,7 +38,9 @@
   }
 
   .likes{
-    color: #121212;
+    color: #f2f2f2;
+    float:right;margin-right: 20px;
+    margin-bottom: 10px;
   }
   .clicked {
     color: red;
