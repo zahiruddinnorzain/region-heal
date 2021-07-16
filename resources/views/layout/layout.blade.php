@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
   <!-- https://www.cssscript.com/minimal-dark-mode-switch-button/ -->
@@ -46,9 +47,32 @@
     color: red;
   }
 
+  #loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+  }
+
+  #loading-image {
+    z-index: 100;
+  }
+
 </style> 
 </head>
 <body>
+
+<div id="loading">
+  <img id="loading-image" src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340" alt="Loading..." />
+</div>
+
 
 <nav class="navbar navbar-expand-sm bg-dark text-white">
   <ul class="navbar-nav">
@@ -77,7 +101,14 @@
 </div>
 
 <script>
+
 changeToDarkMode();
+
+$(window).on('load', function () {
+  $('#loading').hide();
+}) 
+
+
 </script>
 
 </body>
