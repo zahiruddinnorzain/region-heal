@@ -67,6 +67,13 @@
   
 <div class="container">
   @yield('content')
+  <footer class="mb-3 text-white">
+    <center>
+        <a href="https://github.com/zahiruddinnorzain/region-heal" target=_blank style="color: #fff">
+            <i class="fab fa-github fa-lg"></i>
+        </a>
+    </center>
+  </footer>
 </div>
 
 <script>
