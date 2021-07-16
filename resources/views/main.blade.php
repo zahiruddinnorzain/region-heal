@@ -154,6 +154,7 @@
     });
 
 function reload(){
+    $('#loading').show();
     location.reload();
     $(this).scrollTop(0);
 }
