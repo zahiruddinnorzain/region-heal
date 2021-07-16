@@ -35,7 +35,14 @@
   .ml-auto .dropdown-menu {
       left: auto !important;
       right: 0px;
-    }
+  }
+
+  .likes{
+    color: #121212;
+  }
+  .clicked {
+    color: red;
+  }
 
 </style> 
 </head>

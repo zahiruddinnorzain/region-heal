@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Data;
 
 class MainController extends Controller
 {
     function index(Request $request){
-        return view('main');
-        }
+
+        $data = Data::select('*')->inRandomOrder()->get();
+
+        return view('main',[
+          "datas" => $data,
+        ]);
+
+    }
 }

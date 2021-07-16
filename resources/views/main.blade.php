@@ -2,12 +2,17 @@
 
 @section('content')
 
-<div class="card w-100 rounded p-2 mt-3 kotak text-dark">
+@foreach($datas as $data)
+{!! $data->metadata !!}
+@endforeach
+
+<!-- <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
     <p>Throw Memory</p>
     <content>
         <div class="form-group">
             <textarea class="form-control" rows="5" id="comment_memory"></textarea>
         </div>
+        <i class="fas fa-heart likes"></i>
         <a href="#" class="btn btn-success px-3" role="button" style="float:right;" data-toggle="modal" data-target="#myModal" onclick="clear_memory()">Throw !</a>
     </content>
 </div>
@@ -19,6 +24,7 @@
             <img id="id_senam" width="500px" class="img-thumbnail">
         </center>
     </content>
+    <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
 </div>
 
 <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
@@ -28,6 +34,7 @@
             <img id="id_cat" width="500px" class="img-thumbnail">
         </center>
     </content>
+    <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
 </div>
 
 <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
@@ -37,6 +44,7 @@
             <img id="id_gag" width="500px" class="img-thumbnail">
         </center>
     </content>
+    <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
 </div>
 
 <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
@@ -44,6 +52,7 @@
     <content>
         <div id="id_advice" class="h4"></div>
     </content>
+    <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
 </div>
 
 <div class="card w-100 rounded p-2 mt-3 kotak text-dark">
@@ -52,7 +61,8 @@
         <div id="id_jokes_setup" class="h4"></div>
         <div id="id_jokes_punchline" class="h4"></div>
     </content>
-</div>
+    <footer class="mt-4"><i class="fas fa-heart likes"></i></footer>
+</div> -->
 
 <center>
     <a class="btn btn-success mt-3 px-3" role="button" onclick="reload()">More</a>
@@ -132,6 +142,7 @@
 
 function reload(){
     location.reload();
+    $(this).scrollTop(0);
 }
 
 // exercise senaman
@@ -149,6 +160,10 @@ $("#id_senam").attr("src",senaman[nombor_random]["url"]);
 function clear_memory(){
     $("#comment_memory").val('');
 }
+
+$('.likes').click(function(){
+  $(this).toggleClass('clicked');
+});
 
 </script>
 
