@@ -92,7 +92,7 @@
  
         <!-- Modal body -->
         <div class="modal-body">
-          <img id="id_memory" width="500px" class="img-thumbnail" src="https://animesher.com/orig/0/63/634/6346/animesher.com_anime-gif-message-in-a-bottle-water-634629.gif">
+          <img id="id_memory" width="500px" class="img-thumbnail" src="/img/lepasbotol.gif">
           <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;">Close</button>
         </div>
         
@@ -126,7 +126,9 @@
             <center>
                 <img id="id_memory_botol_img" width="500px" class="img-thumbnail" src="/img/botol.jpg">
                 <a id="id_memory_botol_link" href="#" class="btn btn-success mt-2" onclick="pick_botol()">open bottle</a>
-                <div id="id_memory_surat" class="h6 w-100 p-2" style="background-color: #c9ada7; color: #22223b;">Loading..</div>
+                <div id="id_memory_surat" class="h6 w-100 p-2" style="background-color: #c9ada7; color: #22223b;background-image: url('/img/bgpaper.jpg');">
+                    <img id="id_memory" width="50px" src="/img/load.gif">
+                </div>
             </center>
             <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;" onclick="close_botol()">Close</button>
         </div>
@@ -245,7 +247,7 @@ function close_botol(){
     $('#id_memory_botol_img').show();
     $('#id_memory_botol_link').show();
     $('#id_memory_surat').hide();
-    $("#id_memory_surat").html( "Loading.." );
+    $("#id_memory_surat").html( '<img id="id_memory" width="50px" src="/img/load.gif">' );
 }
 
 </script>
