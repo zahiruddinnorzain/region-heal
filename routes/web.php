@@ -18,6 +18,10 @@ use App\Http\Controllers\MainController;
 //     return view('welcome');
 // });
 
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
+
 Route::get('/', [MainController::class, 'index']);
 
 Route::post('/add/memory', [MainController::class, 'throw_bottle']);
