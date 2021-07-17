@@ -45,11 +45,20 @@ class MainController extends Controller
             return 'error';
         }
 
-        $data = Data::select('*')->inRandomOrder()->get();
+        // $data = Data::select('*')->inRandomOrder()->get();
 
-        return view('main',[
-          "datas" => $data,
-        ]);
+        // return view('main',[
+        //   "datas" => $data,
+        // ]);
+
+    }
+
+    function get_bottle(Request $request){
+
+        $data = Laut::all()->where('active','1')->random(1)->first();
+        // dd($data->surat);
+
+        return response()->json($data->surat);
 
     }
 }

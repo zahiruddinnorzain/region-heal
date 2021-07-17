@@ -71,6 +71,7 @@
         </div>
         <a href="#" class="btn btn-primary px-3" role="button" style="float:right;" data-toggle="modal" data-target="#modal_done_throw" onclick="send_memory()">Throw !</a>
         <a href="#" class="btn btn-warning px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_burn" onclick="clear_memory()">Burn !</a>
+        <a href="#" class="btn btn-primary px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_botol">Get Bottle !</a>
     </content>
 </div>
 
@@ -108,6 +109,26 @@
         <div class="modal-body">
           <img id="id_memory" width="500px" class="img-thumbnail" src="/img/burn.gif">
           <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- The Modal memory botol -->
+  <div class="modal fade" id="modal_botol">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+ 
+        <!-- Modal body -->
+        <div class="modal-body">
+            <p class="h3">You found a bottle message!</p>
+            <center>
+                <img id="id_memory_botol_img" width="500px" class="img-thumbnail" src="/img/botol.jpg">
+                <a id="id_memory_botol_link" href="#" class="btn btn-success mt-2" onclick="pick_botol()">open bottle</a>
+                <div id="id_memory_surat" class="h6 w-100 p-2" style="background-color: #c9ada7; color: #22223b;">Loading..</div>
+            </center>
+            <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;" onclick="close_botol()">Close</button>
         </div>
         
       </div>
@@ -207,6 +228,24 @@ function send_memory(){
         }
       });
 
+}
+
+$('#id_memory_surat').hide();
+function pick_botol(){
+    $('#id_memory_botol_img').hide();
+    $('#id_memory_botol_link').hide();
+    $.get( "{{ url('/get/bottle') }}", function( data ) {
+      $("#id_memory_surat").html( data );
+      console.log(data)
+    });
+    $('#id_memory_surat').show();
+}
+
+function close_botol(){
+    $('#id_memory_botol_img').show();
+    $('#id_memory_botol_link').show();
+    $('#id_memory_surat').hide();
+    $("#id_memory_surat").html( "Loading.." );
 }
 
 </script>

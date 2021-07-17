@@ -24,4 +24,6 @@ if (App::environment('production')) {
 
 Route::get('/', [MainController::class, 'index']);
 
+Route::get('/get/bottle', [MainController::class, 'get_bottle']);
+
 Route::post('/tambah/memory', [MainController::class, 'throw_bottle']);
