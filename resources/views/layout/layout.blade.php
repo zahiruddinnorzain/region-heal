@@ -26,11 +26,13 @@
     /*background-color: #91B2C7;*/
     background-color: #f2ead6;
     /*background-color: #343a40;*/
+
   }
 
   .kotak{
-    background-color: #91B2C7;
+    background-color: #4A4E69;
     /*color: #000;*/
+    color: #F2E9E4 !important;
   }
 
   .ml-auto .dropdown-menu {
@@ -39,7 +41,7 @@
   }
 
   .likes{
-    color: #f2f2f2;
+    color: #C9ADA7;
     float:right;margin-right: 20px;
     margin-bottom: 10px;
   }
@@ -63,6 +65,10 @@
 
   #loading-image {
     z-index: 100;
+  }
+
+  .navbar {
+    background-color: #4A4E69 !important;
   }
 
 </style> 
