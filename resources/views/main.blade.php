@@ -69,7 +69,8 @@
         <div class="form-group">
             <textarea class="form-control" rows="5" id="comment_memory"></textarea>
         </div>
-        <a href="#" class="btn btn-success px-3" role="button" style="float:right;" data-toggle="modal" data-target="#myModal" onclick="clear_memory()">Throw !</a>
+        <a href="#" class="btn btn-primary px-3" role="button" style="float:right;" data-toggle="modal" data-target="#modal_done_throw" onclick="send_memory()">Throw !</a>
+        <a href="#" class="btn btn-warning px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_burn" onclick="clear_memory()">Burn !</a>
     </content>
 </div>
 
@@ -83,8 +84,8 @@
 
 <div class="mt-3"></div>
 
-<!-- The Modal memory -->
-  <div class="modal fade" id="myModal">
+<!-- The Modal memory throw -->
+  <div class="modal fade" id="modal_done_throw">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
  
@@ -94,9 +95,20 @@
           <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;">Close</button>
         </div>
         
-        <!-- Modal footer -->
-        <!-- <div class="modal-footer">
-        </div> -->
+      </div>
+    </div>
+  </div>
+
+<!-- The Modal memory burn -->
+  <div class="modal fade" id="modal_burn">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+ 
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img id="id_memory" width="500px" class="img-thumbnail" src="/img/burn.gif">
+          <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;">Close</button>
+        </div>
         
       </div>
     </div>
@@ -178,6 +190,24 @@ function clear_memory(){
 $('.likes').click(function(){
   $(this).toggleClass('clicked');
 });
+
+function send_memory(){
+    var message = $('#comment_memory').val();
+    clear_memory();
+
+    $.post("{{ url('/add/memory') }}",
+    {
+      "_token": "{{ csrf_token() }}",
+      "memory_data": message,
+    },
+    function(data, status){
+      console.log("Data: " + data + "\nStatus: " + status);
+      if(data != null){
+        $("#modal_done_throw").modal('show');
+        }
+      });
+
+}
 
 </script>
 

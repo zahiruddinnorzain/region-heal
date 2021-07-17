@@ -19,3 +19,5 @@ use App\Http\Controllers\MainController;
 // });
 
 Route::get('/', [MainController::class, 'index']);
+
+Route::post('/add/memory', [MainController::class, 'throw_bottle']);
