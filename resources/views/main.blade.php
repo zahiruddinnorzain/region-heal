@@ -126,7 +126,7 @@
             <center>
                 <img id="id_memory_botol_img" width="500px" class="img-thumbnail" src="/img/botol.jpg">
                 <a id="id_memory_botol_link" href="#" class="btn btn-success mt-2" onclick="pick_botol()">open bottle</a>
-                <div id="id_memory_surat" class="h6 w-100 p-2" style="background-color: #c9ada7; color: #22223b;background-image: url('/img/bgpaper.jpg');">
+                <div id="id_memory_surat" class="h6 w-100 p-2" style="background-color: #c9ada7; color: #22223b;background-image: url('/img/bgpaper.jpg');text-align: justify;">
                     <img id="id_memory" width="50px" src="/img/load.gif">
                 </div>
             </center>
