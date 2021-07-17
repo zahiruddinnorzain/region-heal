@@ -71,6 +71,10 @@
     background-color: #4A4E69 !important;
   }
 
+  .modal-content {
+    background-color: #4A4E69 !important;
+  }
+
 </style> 
 </head>
 <body>

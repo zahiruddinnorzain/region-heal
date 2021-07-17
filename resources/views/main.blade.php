@@ -91,12 +91,12 @@
         <!-- Modal body -->
         <div class="modal-body">
           <img id="id_memory" width="500px" class="img-thumbnail" src="https://animesher.com/orig/0/63/634/6346/animesher.com_anime-gif-message-in-a-bottle-water-634629.gif">
+          <button type="button" class="btn btn-danger mt-2" data-dismiss="modal" style="float:right;">Close</button>
         </div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
+        <!-- <div class="modal-footer">
+        </div> -->
         
       </div>
     </div>
