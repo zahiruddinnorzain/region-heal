@@ -195,7 +195,7 @@ function send_memory(){
     var message = $('#comment_memory').val();
     clear_memory();
 
-    $.post("{{ url('/add/memory') }}",
+    $.post("{{ url('/tambah/memory') }}",
     {
       "_token": "{{ csrf_token() }}",
       "memory_data": message,
