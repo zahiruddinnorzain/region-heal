@@ -61,4 +61,13 @@ class MainController extends Controller
         return response()->json($data->surat);
 
     }
+
+    function get_bottle_all(Request $request){
+
+        $data = Laut::select('*')->where('active','1')->orderBy('created_at','DESC')->get();
+        // dd($data->surat);
+
+        return response()->json($data);
+
+    }
 }

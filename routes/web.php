@@ -26,4 +26,6 @@ Route::get('/', [MainController::class, 'index']);
 
 Route::get('/get/bottle', [MainController::class, 'get_bottle']);
 
+Route::get('/get/bottle/all', [MainController::class, 'get_bottle_all']);
+
 Route::post('/tambah/memory', [MainController::class, 'throw_bottle']);
