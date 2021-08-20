@@ -70,7 +70,7 @@
             <textarea class="form-control" rows="5" id="comment_memory" placeholder="Write your letter here!"></textarea>
         </div>
         <a href="#" class="btn btn-success px-3" role="button" style="float:right;" data-toggle="modal" data-target="#modal_done_throw" onclick="send_memory()">Send !</a>
-        <a href="#" class="btn btn-warning px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_burn" onclick="clear_memory()">Burn This letter !</a>
+        <a href="#" class="btn btn-warning px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_burn" onclick="clear_memory()">Burn !</a>
         <a href="#" class="btn btn-primary px-3 mr-2" role="button" style="float:right;" data-toggle="modal" data-target="#modal_botol">Find Bottle !</a>
     </content>
 </div>
